@@ -23,7 +23,10 @@ public class Thirdpersonmovement : MonoBehaviour
     Vector3 velocity;
     bool isGrounded;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
     void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
