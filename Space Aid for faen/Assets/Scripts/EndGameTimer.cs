@@ -7,8 +7,9 @@ using UnityEngine.SceneManagement;
 
 public class EndGameTimer : MonoBehaviour
 {
-    int countDownStartValue = 100;
+    int countDownStartValue = 5;
     public Text TimerIU;
+    public GameObject PauseMenuUI;
 
     bool gameHasEnded = false;
     void Start()
@@ -21,7 +22,7 @@ public class EndGameTimer : MonoBehaviour
         if (countDownStartValue > 0)
         {
             TimeSpan spanTime = TimeSpan.FromSeconds(countDownStartValue);
-            TimerIU.text = "Timer: " + spanTime.Minutes + " : " + spanTime.Seconds;
+            TimerIU.text = "Lokal katastrofe " + spanTime.Minutes + " : " + spanTime.Seconds;
             
             countDownStartValue--;
             Invoke("countDowntimer", 1.0f);
@@ -29,7 +30,8 @@ public class EndGameTimer : MonoBehaviour
         else
         {
             EndGame();
-         
+            Cursor.lockState = CursorLockMode.Confined;
+
         }
     }
     public void EndGame()
@@ -37,7 +39,7 @@ public class EndGameTimer : MonoBehaviour
         if (gameHasEnded == false)
         {
             gameHasEnded = true;
-            SceneManager.LoadScene("spillslutt");
+            PauseMenuUI.SetActive(true);
         }
        
     }
