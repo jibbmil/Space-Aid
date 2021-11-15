@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class EndGameTimer : MonoBehaviour
 {
-    int countDownStartValue = 5;
+    int countDownStartValue = 60;
     public Text TimerIU;
     public GameObject PauseMenuUI;
 
