@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/menu.unity
     guid: 40ccdcecf010a4540a1338dddc3d0334
   - enabled: 1
@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Volcano.unity
     guid: 9d83e8df1559d8c45bdd0be4fe7b60f4
-  - enabled: 1
-    path: Assets/Scenes/spillslutt.unity
+  - enabled: 0
+    path: Assets/Scenes/-spillslutt-.unity
     guid: 406b426035a67e7488e76b63e7c1b5ff
   m_configObjects: {}
